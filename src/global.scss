@@ -1,0 +1,407 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+
+// estilo del alert de home-pet
+
+.pet-details-alert {
+  --background: #f5f8fa;
+  --border-radius: 15px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+
+  // Estilos para el encabezado
+  .alert-head {
+    padding: 24px;
+  }
+  
+  .alert-title {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #1a1a2e;
+    text-align: center;
+  }
+  
+  // Estilos para el mensaje de la alerta
+  .alert-message {
+    padding: 0 24px 24px;
+    font-size: 1em;
+    color: #333;
+    white-space: pre-line; // Mantiene los saltos de línea
+  }
+  
+  // Estilos para la barra de botones
+  .alert-button-group {
+    padding: 16px 24px;
+    background: #e8f0f2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  // Estilos para los botones
+  .alert-button {
+    --background: #ff5722;
+    --color: #fff;
+    --border-radius: 10px;
+    font-weight: 600;
+    height: 45px;
+    margin: 0;
+  }
+}
+
+
+
+// estilos para home.scss
+
+.profile-action-sheet {
+  --background: #fff !important;
+  --backdrop-opacity: 0.7;
+
+  .action-sheet-group {
+    background: #140000;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+
+  .action-sheet-group:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .action-sheet-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+  }
+  
+  .action-sheet-sub-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #7f7f7f;
+    font-size: 0.8em;
+  }
+  
+  .action-sheet-title small {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #444;
+    font-size: 0.8em;
+  }
+  
+  .action-sheet-button {
+    --background-activated: #f0f0f0;
+    --color: #1a1a2e;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    
+    ion-icon {
+      color: #ff5722;
+    }
+  }
+  
+  .action-sheet-button.action-sheet-destructive {
+    --color: var(--ion-color-danger, #eb445a);
+  }
+}
+
+//register
+ion-content {
+  --background: #e8f0f2; // Fondo consistente
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  
+    .app-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 0;
+    }
+
+    .app-logo {
+      width: 150px;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 50px;
+    }
+  }
+
+  .access-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .input-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .custom-input-item {
+  --background: #f5f8fa;
+  --border-radius: 15px;
+  margin-bottom: 20px;
+  height: 55px; 
+  
+  ion-icon {
+    color: #b0c4de;
+    font-size: 1.4em;
+    margin-right: 15px;
+  }
+
+  // Estilo específico para ion-select
+  ion-select {
+    font-family: 'Poppins', sans-serif;
+    --color: #1a1a2e;
+    font-size: 1em;
+    --placeholder-color: #aebfd0;
+    --padding-start: 0;
+    --placeholder-opacity: 1;
+    padding-left: 0; // Asegura que se alinee bien
+    &::part(text) {
+      color: #1a1a2e; // Forzar el color del texto a ser el azul oscuro
+    }
+  } 
+    
+    ion-icon {
+      color: #b0c4de;
+      font-size: 1.4em;
+      margin-right: 15px;
+    }
+  
+    ion-input {
+      font-family: 'Poppins', sans-serif;
+      --color: #1a1a2e;
+      font-size: 1em;
+      --placeholder-color: #aebfd0;
+      --padding-start: 0;
+    }
+  }
+
+  .login-button {
+    --background: #ff5722;
+    --border-radius: 15px;
+    --box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+    height: 55px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .bottom-links {
+    display: flex;
+    justify-content: center; // Centrar los elementos
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    
+    .has-account-text {
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a2e;
+      font-size: 0.95em;
+      margin-right: 5px; // Pequeño espacio entre el texto y el enlace
+    }
+
+    .register-link {
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-size: 0.95em;
+      font-weight: 600;
+    }
+  }
+  
+  ion-modal {
+  --background: #fdfdfd; // Un fondo claro para el modal
+  
+  ion-select-popover {
+    .select-popover-list {
+      background: #fdfdfd; // Asegura que el fondo del popover sea claro
+    }
+    
+    ion-item {
+      --background: #fdfdfd;
+      --color: #1a1a2e; // Forzar el color del texto a ser oscuro
+    }
+
+    ion-button.select-popover-button {
+      --color: #ff5722; // Color del botón "Cancelar" o "Aceptar"
+    }
+  }
+}
+}
+
+//login 
+ion-content {
+  --background: #e8f0f2; // Nuevo color de fondo
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .header-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    .app-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #1a1a2e; // Nuevo color de texto
+      margin: 0;
+    }
+
+    .app-logo {
+      width: 150px;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 50px;
+    }
+  }
+
+  .access-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #1a1a2e; // Nuevo color de texto
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .input-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .custom-input-item {
+    --background: #f5f8fa; // Nuevo color de fondo del input
+    --border-radius: 15px;
+    margin-bottom: 20px;
+    height: 55px; 
+
+    ion-icon {
+      color: #b0c4de; // Nuevo color de icono
+      font-size: 1.4em;
+      margin-right: 15px;
+    }
+
+    ion-input {
+      font-family: 'Poppins', sans-serif;
+      --color: #1a1a2e;
+      font-size: 1em;
+      --placeholder-color: #aebfd0; // Nuevo color de placeholder
+      --padding-start: 0;
+    }
+  }
+
+  .login-button {
+    --background: #ff5722; // Nuevo color de botón
+    --border-radius: 15px;
+    --box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3); // Sombra ajustada al nuevo color
+    height: 55px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .bottom-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+
+    .forgot-password-link,
+    .register-link {
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .forgot-password-link {
+      font-weight: 400;
+    }
+
+    .register-link {
+      font-weight: 600;
+    }
+  }
+}
+
+//deworming
+
+
+
+
+
+
